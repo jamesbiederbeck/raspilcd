@@ -2,7 +2,7 @@
 import RPi_I2C_driver as I2C_LCD_driver
 import sys
 
-message = sys.argv()[1:].join(" ")
+message = " ".join(sys.argv()[1:])
 
 mylcd = I2C_LCD_driver.lcd()
 
