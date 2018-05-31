@@ -1,4 +1,4 @@
-import I2C_LCD_driver
+import RPI_I2C_driver as I2C_LCD_driver
 import socket
 import fcntl
 import struct
