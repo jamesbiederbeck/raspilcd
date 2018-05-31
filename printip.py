@@ -15,4 +15,8 @@ def get_ip_address(ifname):
 
 mylcd.lcd_display_string("IP Address:", 1) 
 
-mylcd.lcd_display_string(get_ip_address('eth0'), 2)
+try:
+    mylcd.lcd_display_string(get_ip_address('eth0'), 2)
+except IOError:
+    mylcd.lcd_display_string(get_ip_address('wlan0'), 2)
+    
